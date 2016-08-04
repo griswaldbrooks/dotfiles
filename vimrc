@@ -1,12 +1,25 @@
 syntax enable
 colorscheme monokai
 set tabstop=4
+
+" Search highligting
+set hlsearch
+
+" Autocomplete
+set wildmode=longest,list
+" Code folding
+set foldmethod=syntax
+
+" Ctags
+set tags=tags;$HOME
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-set hlsearch
-set foldmethod=syntax
-set tags=tags;$HOME
+
+" Enable line numbers
 set number
+
+" Explorer mode settings
+let g:netrw_liststyle=3
 
 " vim-plug plugins
 call plug#begin('~/.vim/plugged')
