@@ -6,6 +6,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Column highlighting for 80 and 120 characters.
+let &colorcolumn="80,".join(range(120,999),",")
+
 " Search highligting.
 set hlsearch
 
