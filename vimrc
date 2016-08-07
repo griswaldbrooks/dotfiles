@@ -6,6 +6,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Color arduino files as cpp
+autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
+
 " Column highlighting for 80 and 120 characters.
 let &colorcolumn="80,".join(range(120,999),",")
 
