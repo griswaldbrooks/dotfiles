@@ -63,3 +63,7 @@ imap <c-s> <Esc><c-s>
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
+
+" Map Ctrl+k key for clang-format.
+map <C-K> :py3f /usr/share/vim/addons/syntax/clang-format.py<cr>
+imap <C-K> <c-o>:py3f /usr/share/vim/addons/syntax/clang-format.py<cr>
