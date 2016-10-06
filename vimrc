@@ -50,7 +50,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_cpplint_exec = "cpplint"
 let g:syntastic_cpp_checkers = ['cpplint']
-
+let g:syntastic_tex_checkers = ['lacheck']
 " Map the Ctrl-S and F2 keys for saving.
 " Ctrl-S doesn't work because of http://vim.wikia.com/wiki/Saving_a_file
 " which can be mitiga.ted by putting
