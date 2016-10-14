@@ -20,6 +20,9 @@ set wildmode=longest,list
 " Code folding.
 set foldmethod=syntax
 
+" Allow python to highlight everything.
+let python_highlight_all = 1
+
 " Ctags.
 set tags=tags;$HOME
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -37,6 +40,9 @@ call plug#begin('~/.vim/plugged')
 " Linter.
 Plug 'https://github.com/scrooloose/syntastic.git'
 
+" SimpylFold for python folding.
+Plug 'https://github.com/tmhedberg/SimpylFold.git'
+
 call plug#end()
 
 " Syntastic Settings.
@@ -51,6 +57,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_cpplint_exec = "cpplint"
 let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_tex_checkers = ['lacheck']
+let g:syntastic_python_checkers = ['flake8']
 " Map the Ctrl-S and F2 keys for saving.
 " Ctrl-S doesn't work because of http://vim.wikia.com/wiki/Saving_a_file
 " which can be mitiga.ted by putting
