@@ -116,3 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH=/usr/local/bin:$PATH
+
+# Launch ssh agent and add key.
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
