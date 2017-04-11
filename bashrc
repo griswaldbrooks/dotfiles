@@ -120,3 +120,8 @@ export PATH=/usr/local/bin:$PATH
 # Launch ssh agent and add key.
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
+
+source ~/victoria/devel/setup.bash
+export ROS_IP=192.168.0.100
+export ROS_HOSTNAME=192.168.0.100
+export ROS_MASTER_URI=http://192.168.0.100:11311/
